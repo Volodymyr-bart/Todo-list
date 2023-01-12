@@ -1,3 +1,4 @@
+// import { createElementTask } from "./js/templateTask.js";
 const addMessage = document.querySelector(".message");
 const addButton = document.querySelector(".add");
 const todo = document.querySelector(".todo");
@@ -22,17 +23,27 @@ function onClickAdd() {
   setParamsInLocal(toDoList);
 }
 
-function displayTodoList() {
-  let displayMessage = "";
-  toDoList.forEach((item, i) => {
-    displayMessage += `
+function createElementTask(item, i) {
+  return `
     <li>
         <input type='checkbox' id='item_${i}' ${item.checked ? "checked" : ""}>
         <label for='item_${i}'>${item.todo}</label>
     </li>
     `;
+}
+
+function displayTodoList() {
+  let displayMessage = "";
+  toDoList.forEach((item, i) => {
+    displayMessage += createElementTask(item, i);
+    // displayMessage += `
+    // <li>
+    //     <input type='checkbox' id='item_${i}' ${item.checked ? "checked" : ""}>
+    //     <label for='item_${i}'>${item.todo}</label>
+    // </li>
+    // `;
     todo.innerHTML = displayMessage;
-    console.log(displayMessage);
+    // console.log(displayMessage);
   });
 }
 

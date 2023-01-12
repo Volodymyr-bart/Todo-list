@@ -23,21 +23,69 @@
         <ul class="todo"></ul>
       </div>
       <div class="wrapper done">
-        <h2 class="wrapper-title">Done</h2>
-        <ul class="todo">
-          <li>
-            <svg class="icon" width="20" height="20">
-              <use href="image/svg/icons.svg#ic_pencil"></use>
-            </svg>
+        <h2 class="wrapper-title">All task list</h2>
+        <ul class="todo-list-active-task">
+          <li class="todo__item">
+            <ul class="notes-list">
+              <li class="notes-list__item--name">Name</li>
+              <li class="notes-list__item--created">Created</li>
+              <li class="notes-list__item--category">Category</li>
+              <li class="notes-list__item--content">Content</li>
+              <li class="notes-list__item--dates">Dates</li>
+              <li class="notes-list__item--icons">
+                <div>
+                  <svg class="view-list__item icon" width="20" height="20">
+                    <use href="image/svg/icons.svg#ic_box-add"></use>
+                  </svg>
+                  <svg class="view-list__item icon" width="20" height="20">
+                    <use href="image/svg/icons.svg#ic_bin2"></use>
+                  </svg>                  
+                </div>
+              </li>
+            </ul>
           </li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
         </ul>
-      </div>
+        <ul class="todo-list-active-task">
+          <li class="todo__item">
+            <ul class="notes-list">
+              <li class="notes-list__item--name">
+                <svg class="view-list__item icon" width="20" height="20">
+                    <use href="image/svg/icons.svg#ic_shopping-cart-alt"></use>
+                </svg>
+                <span class="notes-list__item__name">Shoping list</span>
+              </li>
+              <li class="notes-list__item--created">April 20, 2021</li>
+              <li class="notes-list__item--category">Task</li>
+              <li class="notes-list__item--content">tomatoes, bread</li>
+              <li class="notes-list__item--dates">3/5/2021 , 5/5/2021</li>
+              <li class="notes-list__item--icons">
+                <div>
+                  <svg class="view-list__item icon" width="20" height="20">
+                    <use href="image/svg/icons.svg#ic_pencil"></use>
+                  </svg>
+                  <svg class="view-list__item icon" width="20" height="20">
+                    <use href="image/svg/icons.svg#ic_box-add"></use>
+                  </svg>
+                  <svg class="view-list__item icon" width="20" height="20">
+                    <use href="image/svg/icons.svg#ic_bin2"></use>
+                  </svg>                                    
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="create_new_todo">
+          <input type="text" class="message" placeholder="Описание" />
+          <select name="category">
+            <option value="Task">Task</option>
+            <option value="Thought">Random Thought</option>
+            <option value="Idea">Idea</option>            
+          </select>
+          <button class="add">Добавить</button>
+        </div>
+      </div> 
     </div>
-    <script src="./script.js"></script>
+    </div>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>
